@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="sq" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Albania | Uebsajte Profesionale nga 15 000 LEK</title>
+    <meta name="description" content="Uebsajte moderne dhe profesionale për bizneset në Shqipëri. Faqe shumëgjuhëshe, optimizim për celularë, Google Maps dhe SEO. Duke filluar nga 15 000 LEK.">
+    <meta name="keywords" content="website design Albania, web design Albania, website development Albania, website for small business Albania, website design Tirana, website for restaurants, website for hotels, website for apartments, affordable website Albania">
+    
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            900: '#064e3b',
+                        },
+                        navy: {
+                            800: '#0f172a',
+                            900: '#0b0f19',
+                            950: '#05070c',
+                        },
+                        accent: {
+                            blue: '#2563eb',
+                            gold: '#f59e0b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .glass-card-dark {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #059669 0%, #2563eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-text-gold {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .hero-domain {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            vertical-align: bottom;
+            max-width: 0;
+            border-right: 2px solid rgba(110, 231, 183, 0);
+            animation:
+                domainType 5s steps(15, end) infinite,
+                domainCaret 0.7s step-end infinite,
+                domainGlow 5s ease-in-out infinite;
+        }
+        @keyframes domainType {
+            0%, 5%   { max-width: 0; opacity: 1; }
+            55%, 82% { max-width: 15ch; opacity: 1; }
+            90%      { max-width: 0; opacity: 0; }
+            91%      { opacity: 1; }
+            100%     { max-width: 0; opacity: 1; }
+        }
+        @keyframes domainCaret {
+            0%, 100% { border-color: transparent; }
+            50%      { border-color: rgba(110, 231, 183, 0.9); }
+        }
+        @keyframes domainGlow {
+            0%, 15%  { text-shadow: 0 0 0 rgba(16, 185, 129, 0); }
+            50%      { text-shadow: 0 0 10px rgba(52, 211, 153, 0.75); }
+            85%, 100% { text-shadow: 0 0 0 rgba(16, 185, 129, 0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero-domain {
+                animation: none;
+                max-width: none;
+                opacity: 1;
+                border-right: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white pb-20 md:pb-0">
+
+    <!-- HEADER NAV -->
+    <header class="sticky top-0 z-50 glass-card border-b border-slate-200/80 transition-all duration-300 shadow-sm" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-400 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                    <i data-lucide="globe" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-slate-900 block leading-none">Besa<span class="text-brand-600">Web</span></span>
+                    <span class="text-[10px] font-semibold tracking-widest uppercase text-slate-600 block mt-1">Albania Business Web Solutions</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-5 font-bold text-sm text-slate-600">
+                <a href="#why-website" class="hover:text-brand-600 transition-colors" data-i18n="nav_why">Pse uebsajt?</a>
+                <a href="#features" class="hover:text-brand-600 transition-colors" data-i18n="nav_features">Çfarë përfshin</a>
+                <a href="#sectors" class="hover:text-brand-600 transition-colors" data-i18n="nav_sectors">Për kë është</a>
+                <a href="#how-it-works" class="hover:text-brand-600 transition-colors" data-i18n="nav_process">Si funksionon</a>
+                <a href="#pricing" class="hover:text-brand-600 transition-colors" data-i18n="nav_pricing">Çmimi</a>
+                <a href="#faq" class="hover:text-brand-600 transition-colors" data-i18n="nav_faq">Pyetje</a>
+            </nav>
+
+            <!-- Language Switcher & Primary CTA -->
+            <div class="flex items-center gap-3">
+                <!-- Language Selector Pill -->
+                <div class="bg-slate-100 p-1 rounded-full border border-slate-200 flex items-center text-xs font-bold">
+                    <button onclick="setLanguage('sq')" id="lang-sq" class="px-2 py-1 rounded-full transition-all bg-white text-slate-900 shadow-sm" aria-label="Shqip" title="Shqip">
+                        <img src="https://flagcdn.com/w40/al.png" alt="Shqip" class="w-5 h-3.5 rounded-sm object-cover block">
+                    </button>
+                    <button onclick="setLanguage('en')" id="lang-en" class="px-2 py-1 rounded-full text-slate-600 hover:text-slate-900 transition-all" aria-label="English" title="English">
+                        <img src="https://flagcdn.com/w40/gb.png" alt="English" class="w-5 h-3.5 rounded-sm object-cover block">
+                    </button>
+                    <button onclick="setLanguage('cz')" id="lang-cz" class="px-2 py-1 rounded-full text-slate-600 hover:text-slate-900 transition-all" aria-label="Čeština" title="Čeština">
+                        <img src="https://flagcdn.com/w40/cz.png" alt="Čeština" class="w-5 h-3.5 rounded-sm object-cover block">
+                    </button>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="#proposal-form" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-b from-brand-500 to-brand-700 hover:from-brand-600 hover:to-brand-900 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-brand-600/25 transition-all transform hover:-translate-y-0.5">
+                    <span data-i18n="nav_cta">MERR PROPOZIM FALAS</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-700 hover:text-slate-900 focus:outline-none">
+                    <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6"></i>
+                    <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 hidden"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Nav -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white/95 backdrop-blur-lg px-4 pt-4 pb-6 space-y-1.5">
+            <a href="#why-website" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-bold" data-i18n="nav_why">Pse uebsajt?</a>
+            <a href="#features" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-bold" data-i18n="nav_features">Çfarë përfshin</a>
+            <a href="#sectors" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-bold" data-i18n="nav_sectors">Për kë është</a>
+            <a href="#how-it-works" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-bold" data-i18n="nav_process">Si funksionon</a>
+            <a href="#pricing" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-bold" data-i18n="nav_pricing">Çmimi</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-bold" data-i18n="nav_faq">Pyetje të shpeshta</a>
+            <div class="pt-2">
+                <a href="#proposal-form" onclick="toggleMobileMenu()" class="block w-full text-center bg-brand-600 text-white font-semibold py-3 rounded-xl" data-i18n="nav_cta">
+                    MERR PROPOZIM FALAS
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative pt-8 pb-20 lg:pt-16 lg:pb-32 overflow-hidden bg-slate-900 text-white">
+        <!-- Abstract gradient backgrounds -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-tr from-brand-600/20 via-sky-500/10 to-transparent blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-10 -right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Column: Copy -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    
+                    <!-- Trust Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-400 text-xs sm:text-sm font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping"></span>
+                        <span data-i18n="hero_badge">100% Pa Rrezik • Së pari merrni konceptin falas!</span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]" data-i18n="hero_title">
+                        Biznesi juaj meriton uebsajtin e vet me emër e dinjitet.
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-xl text-slate-300 max-w-2xl font-normal leading-relaxed mx-auto lg:mx-0" data-i18n="hero_subtitle">
+                        Uebsajte moderne, të lira dhe të shpejta që duken shkëlqyeshëm, gjenden lehtë në Google dhe ju ndihmojnë të fitoni klientë të rinj.
+                    </p>
+
+                    <!-- Key Value Props Quick Checklist -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs sm:text-sm text-slate-300 font-medium max-w-xl mx-auto lg:mx-0">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-400 flex-shrink-0"></i>
+                            <span data-i18n="hero_check1">Çmimi fiks €160</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-400 flex-shrink-0"></i>
+                            <span data-i18n="hero_check2">Propozimi 100% Falas</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-400 flex-shrink-0"></i>
+                            <span data-i18n="hero_check3">Gati në pak ditë</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Group -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#proposal-form" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-b from-brand-500 to-brand-700 hover:from-brand-600 hover:to-brand-900 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-brand-500/20 transition-all transform hover:-translate-y-0.5 text-base">
+                            <i data-lucide="sparkles" class="w-5 h-5"></i>
+                            <span data-i18n="hero_cta_secondary">MERR PROPOZIM FALAS</span>
+                        </a>
+                    </div>
+
+                    <!-- Payment Assurance Note -->
+                    <p class="text-xs text-slate-400 italic" data-i18n="hero_guarantee_text">
+                        * Nuk keni asnjë detyrim financiar. Paguani vetëm pasi të miratoni dizajnin përfundimtar!
+                    </p>
+
+                </div>
+
+                <!-- Right Column: Interactive Digital Showcase Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative Frame Behind -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-sky-500 rounded-2xl blur opacity-30"></div>
+                        
+                        <!-- Showcase Device Frame -->
+                        <div class="relative bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
+                            <!-- Device Header Bar -->
+                            <div class="bg-slate-800 px-4 py-3 flex items-center justify-between border-b border-slate-700/60">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                                    <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+                                    <span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
+                                </div>
+                                <div class="bg-slate-900 px-3 py-1 rounded-md text-[11px] text-slate-400 font-mono flex items-center gap-1">
+                                    <i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i>
+                                    <span class="hero-domain text-white font-bold text-sm" data-i18n="hero_mock_domain">domenijuaj.al</span>
+                                </div>
+                                <span class="text-[10px] bg-brand-500/20 text-brand-300 font-semibold px-2 py-0.5 rounded">LIVE PREVIEW</span>
+                            </div>
+
+                            <!-- Mock Website Inner Body -->
+                            <div class="p-5 space-y-4 bg-slate-950/80 min-h-[380px] flex flex-col justify-between">
+                                <!-- Mock Top Banner -->
+                                <div class="relative h-44 rounded-xl overflow-hidden bg-slate-800 group">
+                                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" onerror="this.src='https://placehold.co/800x400/1e293b/ffffff?text=Professional+Business+Website'">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                                    <div class="absolute bottom-3 left-3 right-3 flex justify-between items-end">
+                                        <div>
+                                            <span class="bg-brand-500 text-slate-950 font-bold text-[10px] px-2 py-0.5 rounded uppercase tracking-wider" data-i18n="hero_mock_tag">RESTORANT & BAR</span>
+                                            <h4 class="text-white font-bold text-lg mt-0.5">Vila Tirana & Lounge</h4>
+                                            <p class="text-slate-300 text-xs flex items-center gap-1">
+                                                <i data-lucide="map-pin" class="w-3 h-3 text-brand-400"></i> Rruga Blloku, Tiranë
+                                            </p>
+                                        </div>
+                                        <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] px-2 py-1 rounded-lg font-bold flex items-center gap-1">
+                                            <i data-lucide="star" class="w-3 h-3 fill-current"></i> 4.9 (240+)
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Mock Quick Info Grid -->
+                                <div class="grid grid-cols-3 gap-2">
+                                    <div class="bg-slate-900 border border-slate-800 p-2.5 rounded-lg text-center">
+                                        <i data-lucide="clock" class="w-4 h-4 text-brand-400 mx-auto mb-1"></i>
+                                        <p class="text-[10px] text-slate-400" data-i18n="hero_mock_hours">Hapur sot</p>
+                                        <p class="text-xs font-bold text-white">08:00 - 23:00</p>
+                                    </div>
+                                    <div class="bg-slate-900 border border-slate-800 p-2.5 rounded-lg text-center">
+                                        <i data-lucide="languages" class="w-4 h-4 text-sky-400 mx-auto mb-1"></i>
+                                        <p class="text-[10px] text-slate-400" data-i18n="hero_mock_lang">Gjuhët</p>
+                                        <p class="text-xs font-bold text-white">AL | EN | IT</p>
+                                    </div>
+                                    <div class="bg-slate-900 border border-slate-800 p-2.5 rounded-lg text-center">
+                                        <i data-lucide="phone" class="w-4 h-4 text-emerald-400 mx-auto mb-1"></i>
+                                        <p class="text-[10px] text-slate-400" data-i18n="hero_mock_contact">Rezervo</p>
+                                        <p class="text-xs font-bold text-white">+355 69...</p>
+                                    </div>
+                                </div>
+
+                                <!-- Mock Action Buttons -->
+                                <div class="flex gap-2">
+                                    <button class="flex-1 bg-gradient-to-b from-brand-500 to-brand-700 hover:from-brand-600 hover:to-brand-900 text-white font-bold py-2 rounded-lg text-xs flex items-center justify-center gap-1.5 shadow">
+                                        <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+                                        <span data-i18n="hero_mock_btn_reserve">Rezervo Tavolinë</span>
+                                    </button>
+                                    <button class="bg-slate-800 text-white p-2 rounded-lg text-xs border border-slate-700 flex items-center justify-center">
+                                        <i data-lucide="navigation" class="w-4 h-4 text-sky-400"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Stat Badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-white text-slate-900 p-4 rounded-xl shadow-2xl border border-slate-100 hidden sm:flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check-check" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium" data-i18n="hero_float_label">Klientë të Kënaqur</p>
+                                <p class="text-sm font-bold text-slate-900" data-i18n="hero_float_val">Dizajn Zyrtar & Profesional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. PROBLÉM SECTION -->
+    <section id="why-website" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">
+                <div class="text-center lg:text-left space-y-4">
+                    <span class="text-brand-600 font-extrabold text-xs tracking-wider uppercase bg-brand-50 px-3 py-1 rounded-full border border-brand-200" data-i18n="prob_tag">DILEMA E PODNIKIMIT</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900" data-i18n="prob_title">
+                        Klientët tuaj po ju kërkojnë çdo ditë në internet.
+                    </h2>
+                    <p class="text-slate-600 text-lg leading-relaxed" data-i18n="prob_desc">
+                        Mediat sociale janë një mjet i shkëlqyer, por nuk janë karta juaj dixhitale e identifikimit. Do të arrini shumë klientë përmes Instagram ose Facebook - por jo të gjithë. Kur dikush ju kërkon në Google, faqja juaj e internetit u ofron atyre një vend të qartë dhe të besueshëm për të gjetur gjithçka që u nevojitet: shërbimet, fotot, orarin e hapjes, vendndodhjen dhe informacionin e kontaktit - pa pasur nevojë të kërkojnë nëpër platforma të ndryshme.
+                    </p>
+                </div>
+
+                <!-- Illustration: business website surrounded by live engagement stats -->
+                <figure class="w-full max-w-md mx-auto lg:max-w-none">
+                    <img src="images/dilemma-devices.png" alt="Kompjuter me uebsajtin e biznesit i rrethuar nga statistika: telefonata sot, ndjekës, foto, biseda aktive dhe vlerësime klientësh" class="w-full h-auto" loading="lazy">
+                </figure>
+            </div>
+
+            <!-- Comparison Grid: Social Media vs Own Website -->
+            <div class="grid md:grid-cols-2 gap-8 items-stretch">
+                
+                <!-- Card 1: Social Media Alone (Fragmented) -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 flex flex-col justify-between space-y-6">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3 py-1 rounded-md bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider" data-i18n="prob_social_badge">Vetëm Rrjetet Sociale</span>
+                            <i data-lucide="alert-circle" class="w-6 h-6 text-amber-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="prob_social_h">Informacion i shpërndarë kudo</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6" data-i18n="prob_social_p">
+                            Shumë klientë përdorin Instagram e Facebook, por JO TË GJITHË. Për më tepër, çmimet, menuja apo orari i punës shpesh humbasin mes dhjetëra postimeve të vjetra.
+                        </p>
+                        
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="x" class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5"></i>
+                                <span data-i18n="prob_social_li1">Klientët duhet të kërkojnë në disa vende për të gjetur orarin ose numrin.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="x" class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5"></i>
+                                <span data-i18n="prob_social_li2">Turistët e huaj shpesh kërkojnë vetëm në Google, jo në Instagram local.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="x" class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5"></i>
+                                <span data-i18n="prob_social_li3">Pamje jo tërësisht profesionale për përfaqësim biznesi serioz.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 text-xs text-slate-500 italic" data-i18n="prob_social_footer">
+                        Rrjetet sociale janë mjet i mirë, por jo shtëpia e vetme e biznesit tuaj.
+                    </div>
+                </div>
+
+                <!-- Card 2: Own Website (Centralized Hub) -->
+                <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-8 border border-slate-700 shadow-xl flex flex-col justify-between space-y-6 relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-500/20 rounded-full blur-2xl"></div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3 py-1 rounded-md bg-brand-500/20 text-brand-300 border border-brand-500/30 text-xs font-bold uppercase tracking-wider" data-i18n="prob_web_badge">Uebsajti Juaj Zyrtar</span>
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3" data-i18n="prob_web_h">Një vend i vetëm profesional për të gjithë</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="prob_web_p">
+                            Kur njerëzit kërkojnë për biznesin tuaj në Google, uebsajti juaj u jep një hapësirë zyrtare ku gjejnë menjëherë shërbimet, fotot, çmimet, orarin, vendndodhjen në hartë dhe opsionin e kontaktit.
+                        </p>
+                        
+                        <ul class="space-y-3 text-sm text-slate-200">
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-400 flex-shrink-0 mt-0.5"></i>
+                                <span data-i18n="prob_web_li1">Vendndodhja në Google Maps dhe navigimi direkt me 1 klik.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-400 flex-shrink-0 mt-0.5"></i>
+                                <span data-i18n="prob_web_li2">Përmbajtje shumëgjuhëshe (Shqip, Anglisht, Italisht etj.) për turistë.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-400 flex-shrink-0 mt-0.5"></i>
+                                <span data-i18n="prob_web_li3">Formular rezervimi direkt në email apo në WhatsApp-in tuaj.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-700/80 text-xs text-brand-300 font-semibold flex items-center justify-between">
+                        <span data-i18n="prob_web_footer">Baza digjitale e sigurt e biznesit tuaj.</span>
+                        <i data-lucide="shield-check" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. ŘEŠENÍ / SOLUTION & FEATURES -->
+    <section id="features" class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-600 font-extrabold text-xs tracking-wider uppercase bg-brand-100/80 px-3 py-1 rounded-full" data-i18n="feat_tag">Gjithçka e Përfshirë</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900" data-i18n="feat_title">
+                    Gjithçka që u nevojitet klientëve tuaj — në një vend.
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg" data-i18n="feat_subtitle">
+                    Paketa jonë e kompletuar përfshin të gjitha funksionalitetet e nevojshme për një prani profesionale në internet.
+                </p>
+            </div>
+
+            <!-- Feature Cards Grid (12 Features) -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Feature 1: Multilingual -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="languages" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2" data-i18n="f1_title">MULTILINGUAL WEBSITE</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="f1_desc">
+                        Uebsajti mund të jetë i disponueshëm në 2-3 gjuhë sipas nevojave tuaja (Shqip, Anglisht, Italisht etj.).
+                    </p>
+                </div>
+
+                <!-- Feature 2: Business Presentation -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="building-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2" data-i18n="f2_title">BUSINESS PRESENTATION</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="f2_desc">
+                        Prezantoni kompaninë, shërbimet, përvojën dhe atë që e bën biznesin tuaj të veçantë.
+                    </p>
+                </div>
+
+                <!-- Feature 3: Services / Menu -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="utensils" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2" data-i18n="f3_title">SERVICES / MENU</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="f3_desc">
+                        Tregoni qartë shërbimet, produktet, ushqimet dhe çmimet tuaja në mënyrë estetike.
+                    </p>
+                </div>
+
+                <!-- Feature 4: Photo Gallery -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="image" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2" data-i18n="f4_title">PHOTO GALLERY</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="f4_desc">
+                        Ekspozoni ambientin e brendshëm, të jashtëm, produktet, ekipin apo punët tuaja të mëparshme.
+                    </p>
+                </div>
+
+                <!-- Feature 5: Google Maps Integration -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2" data-i18n="f5_title">GOOGLE MAPS</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="f5_desc">
+                        Ndihmoni klientët t'ju gjejnë lehtësisht dhe të marrin udhëzimet e hartës me një klik.
+                    </p>
+                </div>
+
+                <!-- Feature 6: Opening Hours -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="clock" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2" data-i18n="f6_title">OPENING HOURS</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="f6_desc">
+                        Tregoni qartë orarin se kur klientët mund t'ju vizitojnë ose të komunikojnë me ju.
+                    </p>
+                </div>
+
+                <!-- Feature 7: Contact & Social Media -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-xl bg-violet-50 text-violet-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="message-square" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2" data-i18n="f7_title">CONTACT & SOCIAL MEDIA</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="f7_desc">
+                        Telefon, email, Instagram, Facebook, Messenger, WhatsApp dhe kanale të tjera komunikimi.
+                    </p>
+                </div>
+
+                <!-- Feature 8: Reservation Form -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="calendar-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2" data-i18n="f8_title">RESERVATION FORM</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="f8_desc">
+                        Klientët mund të dërgojnë një kërkesë për rezervim direkt në email-in apo telefonin tuaj.
+                    </p>
+                </div>
+
+                <!-- Feature 12: Google Reviews -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-xl bg-yellow-50 text-yellow-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="star" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2" data-i18n="f12_title">GOOGLE REVIEWS</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="f12_desc">
+                        Shfaqni vlerësimin mesatar dhe numrin e recensioneve nga Google si dëshmi e kënaqësisë së klientëve.
+                    </p>
+                </div>
+
+                <!-- Feature 9: Mobile Optimization -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="smartphone" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2" data-i18n="f9_title">MOBILE OPTIMIZATION</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="f9_desc">
+                        Pamje e përsosura dhe e shpejtë në celularë, tableta si dhe kompjuterë desktop.
+                    </p>
+                </div>
+
+                <!-- Feature 10: Basic SEO -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="search" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2" data-i18n="f10_title">BASIC SEO</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="f10_desc">
+                        Optimizim bazë për motorët e kërkimit për t'u gjetur lehtësisht nga klientët në Google.
+                    </p>
+                </div>
+
+                <!-- Feature 11: Monthly Traffic Report -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2" data-i18n="f11_title">MONTHLY TRAFFIC REPORT</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="f11_desc">
+                        Raport i rregullt që tregon sa njerëz e vizituan uebsajtin tuaj dhe nga erdhën ata.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. PRO KOHO JE SLUŽBA / TARGET AUDIENCE -->
+    <section id="sectors" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+                <span class="text-brand-600 font-extrabold text-xs tracking-wider uppercase bg-brand-50 px-3 py-1 rounded-full border border-brand-200" data-i18n="sec_tag">CILËSITË E BIZNESIT</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900" data-i18n="sec_title">
+                    Ideale për bizneset e vogla dhe ato në zhvillim
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg" data-i18n="sec_subtitle">
+                    Kemi përvojë të dedikuar me sektorët më kryesorë të sipërmarrjes në Shqipëri.
+                </p>
+            </div>
+
+            <!-- Target Audience Cards Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                
+                <!-- Sector 1 -->
+                <div class="relative overflow-hidden rounded-2xl group border border-slate-200 shadow-sm hover:shadow-xl transition-all h-64 flex flex-col justify-end p-5">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Restaurants" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x600/0f172a/ffffff?text=Restaurants'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
+                    <div class="relative z-10 text-white">
+                        <i data-lucide="utensils" class="w-6 h-6 text-brand-400 mb-2"></i>
+                        <h3 class="font-bold text-lg leading-tight" data-i18n="sec_r1">Restaurants & Bars</h3>
+                        <p class="text-xs text-slate-300 mt-1" data-i18n="sec_r1_sub">Menu digjitale, adresa, rezervime</p>
+                    </div>
+                </div>
+
+                <!-- Sector 2 -->
+                <div class="relative overflow-hidden rounded-2xl group border border-slate-200 shadow-sm hover:shadow-xl transition-all h-64 flex flex-col justify-end p-5">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Hotels & Apartments" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x600/0f172a/ffffff?text=Hotels'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
+                    <div class="relative z-10 text-white">
+                        <i data-lucide="bed" class="w-6 h-6 text-brand-400 mb-2"></i>
+                        <h3 class="font-bold text-lg leading-tight" data-i18n="sec_r2">Hotels & Apartments</h3>
+                        <p class="text-xs text-slate-300 mt-1" data-i18n="sec_r2_sub">Dhoma, fotogaleri, rezervime direkte</p>
+                    </div>
+                </div>
+
+                <!-- Sector 3 -->
+                <div class="relative overflow-hidden rounded-2xl group border border-slate-200 shadow-sm hover:shadow-xl transition-all h-64 flex flex-col justify-end p-5">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=600&q=80" alt="Tourism Agencies" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x600/0f172a/ffffff?text=Tourism'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
+                    <div class="relative z-10 text-white">
+                        <i data-lucide="compass" class="w-6 h-6 text-brand-400 mb-2"></i>
+                        <h3 class="font-bold text-lg leading-tight" data-i18n="sec_r3">Tourism & Tours</h3>
+                        <p class="text-xs text-slate-300 mt-1" data-i18n="sec_r3_sub">Turat, itineraret, kontakt shumëgjuhësh</p>
+                    </div>
+                </div>
+
+                <!-- Sector 4 -->
+                <div class="relative overflow-hidden rounded-2xl group border border-slate-200 shadow-sm hover:shadow-xl transition-all h-64 flex flex-col justify-end p-5">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="Real Estate" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x600/0f172a/ffffff?text=Real+Estate'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
+                    <div class="relative z-10 text-white">
+                        <i data-lucide="home" class="w-6 h-6 text-brand-400 mb-2"></i>
+                        <h3 class="font-bold text-lg leading-tight" data-i18n="sec_r4">Real Estate</h3>
+                        <p class="text-xs text-slate-300 mt-1" data-i18n="sec_r4_sub">Listimi i pronave, kontaktet e agjentëve</p>
+                    </div>
+                </div>
+
+                <!-- Sector 5 -->
+                <div class="relative overflow-hidden rounded-2xl group border border-slate-200 shadow-sm hover:shadow-xl transition-all h-64 flex flex-col justify-end p-5">
+                    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=600&q=80" alt="Beauty & Barber" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x600/0f172a/ffffff?text=Beauty'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
+                    <div class="relative z-10 text-white">
+                        <i data-lucide="sparkles" class="w-6 h-6 text-brand-400 mb-2"></i>
+                        <h3 class="font-bold text-lg leading-tight" data-i18n="sec_r5">Beauty & Barber</h3>
+                        <p class="text-xs text-slate-300 mt-1" data-i18n="sec_r5_sub">Caktim orari, shërbimet, lista e çmimeve</p>
+                    </div>
+                </div>
+
+                <!-- Sector 6 -->
+                <div class="relative overflow-hidden rounded-2xl group border border-slate-200 shadow-sm hover:shadow-xl transition-all h-64 flex flex-col justify-end p-5">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Local Services" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x600/0f172a/ffffff?text=Services'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
+                    <div class="relative z-10 text-white">
+                        <i data-lucide="wrench" class="w-6 h-6 text-brand-400 mb-2"></i>
+                        <h3 class="font-bold text-lg leading-tight" data-i18n="sec_r6">Local Services & Auto</h3>
+                        <p class="text-xs text-slate-300 mt-1" data-i18n="sec_r6_sub">Autoservis, mecanicë, punë me dorë</p>
+                    </div>
+                </div>
+
+                <!-- Sector 7 -->
+                <div class="relative overflow-hidden rounded-2xl group border border-slate-200 shadow-sm hover:shadow-xl transition-all h-64 flex flex-col justify-end p-5">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="Healthcare & Dental Clinics" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x600/0f172a/ffffff?text=Health'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
+                    <div class="relative z-10 text-white">
+                        <i data-lucide="stethoscope" class="w-6 h-6 text-brand-400 mb-2"></i>
+                        <h3 class="font-bold text-lg leading-tight" data-i18n="sec_r7">Shops & Retail</h3>
+                        <p class="text-xs text-slate-300 mt-1" data-i18n="sec_r7_sub">Dyqane, katalog produktesh, vendndodhja</p>
+                    </div>
+                </div>
+
+                <!-- Sector 8 -->
+                <div class="relative overflow-hidden rounded-2xl group border border-slate-200 shadow-sm hover:shadow-xl transition-all h-64 flex flex-col justify-end p-5">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Small Businesses" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x600/0f172a/ffffff?text=Small+Business'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
+                    <div class="relative z-10 text-white">
+                        <i data-lucide="briefcase" class="w-6 h-6 text-brand-400 mb-2"></i>
+                        <h3 class="font-bold text-lg leading-tight" data-i18n="sec_r8">Small & New Businesses</h3>
+                        <p class="text-xs text-slate-300 mt-1" data-i18n="sec_r8_sub">Startups dhe biznese të reja në treg</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. JAK TO FUNGUJE / HOW IT WORKS -->
+    <section id="how-it-works" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-400 font-extrabold text-xs tracking-wider uppercase bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/30" data-i18n="how_tag">PROCES I THJESHTË</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white" data-i18n="how_title">
+                    Si funksionon krijimi i uebsajtit?
+                </h2>
+                <p class="text-slate-300 text-base sm:text-lg" data-i18n="how_subtitle">
+                    Process transparent me 4 hapa të lehtë pa asnjë rrezik apo detyrim paraprak.
+                </p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                
+                <!-- Step 01 -->
+                <div class="bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl relative space-y-4 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-4xl font-black text-brand-400">01</span>
+                            <div class="w-10 h-10 rounded-xl bg-slate-700/60 flex items-center justify-center text-slate-300">
+                                <i data-lucide="send" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2" data-i18n="step1_title">CONTACT US</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed" data-i18n="step1_desc">
+                            Na tregoni për biznesin tuaj dhe se çfarë ju nevojitet përmes formularit të thjeshtë.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 02 -->
+                <div class="bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl relative space-y-4 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-4xl font-black text-brand-400">02</span>
+                            <div class="w-10 h-10 rounded-xl bg-slate-700/60 flex items-center justify-center text-slate-300">
+                                <i data-lucide="layout" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2" data-i18n="step2_title">FREE PROPOSAL</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed" data-i18n="step2_desc">
+                            Ne përgatisim një propozim falas dhe konceptin vizual të uebsajtit tuaj pa asnjë detyrim.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="bg-slate-800/80 border border-brand-500/50 p-6 rounded-2xl relative space-y-4 flex flex-col justify-between shadow-lg shadow-brand-500/10">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-4xl font-black text-brand-400">03</span>
+                            <div class="w-10 h-10 rounded-xl bg-brand-500/20 text-brand-300 flex items-center justify-center">
+                                <i data-lucide="thumbs-up" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2" data-i18n="step3_title">APPROVE</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed" data-i18n="step3_desc">
+                            Ju vendosni nëse dëshironi të vazhdoni pasi ta keni parë dizajnin. Nëse ju pëlqen, atëherë fillojmë.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 04 -->
+                <div class="bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl relative space-y-4 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-4xl font-black text-brand-400">04</span>
+                            <div class="w-10 h-10 rounded-xl bg-slate-700/60 flex items-center justify-center text-slate-300">
+                                <i data-lucide="rocket" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2" data-i18n="step4_title">YOUR WEBSITE GOES LIVE</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed" data-i18n="step4_desc">
+                            Ne krijojmë, publikojmë dhe konfigurojmë uebsajtin tuaj që të jetë 100% online.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Important Highlight Box -->
+            <div class="mt-12 bg-gradient-to-r from-brand-900/60 to-slate-800 border border-brand-500/40 p-6 rounded-2xl text-center max-w-3xl mx-auto shadow-xl">
+                <div class="flex items-center justify-center gap-3 text-brand-300 font-bold text-base sm:text-lg">
+                    <i data-lucide="shield-check" class="w-6 h-6 text-brand-400 flex-shrink-0"></i>
+                    <span data-i18n="how_guarantee_notice">You pay only after approving the proposal and deciding to proceed.</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6 & 7. CENA & SPRÁVA WEBU / PRICING & MAINTENANCE -->
+    <section id="pricing" class="py-20 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-600 font-extrabold text-xs tracking-wider uppercase bg-brand-100/80 px-3 py-1 rounded-full" data-i18n="price_tag">OFERTA FINANCIARE</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900" data-i18n="price_title">
+                    A professional website without the agency price.
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg" data-i18n="price_subtitle">
+                    Çmime krejtësisht transparente pa kosto të fshehura apo surpriza.
+                </p>
+            </div>
+
+            <!-- Two Main Pricing Cards Grid -->
+            <div class="grid lg:grid-cols-[1fr_auto_1fr] gap-6 items-stretch max-w-5xl mx-auto">
+
+                <!-- CARD 1: WEBSITE CREATION (€160 One-time) -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-brand-500 shadow-xl relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-black text-slate-900" data-i18n="pr1_name">WEBSITE CREATION</h3>
+                                <p class="text-slate-500 text-sm" data-i18n="pr1_desc">Dizajn & Zhvillim Kompleti i Uebsajtit</p>
+                            </div>
+                        </div>
+
+                        <!-- Price Tag -->
+                        <div class="my-6 p-4 rounded-2xl bg-brand-50/60 border border-brand-100 flex flex-col gap-1">
+                            <span class="text-4xl font-black text-slate-900" data-i18n="pr1_price">€160</span>
+                            <span class="text-slate-600 font-semibold text-sm" data-i18n="pr1_type">Pagesë vetëm një herë</span>
+                        </div>
+
+                        <p class="text-xs text-brand-700 font-bold mb-6 flex items-center gap-1.5">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500"></i>
+                            <span data-i18n="pr1_subtext">Paguani vetëm mbasi të keni parë dhe miratuar dizajnin!</span>
+                        </p>
+
+                        <!-- Features Included Checklist -->
+                        <ul class="space-y-3 text-sm text-slate-700 mb-8">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-600 flex-shrink-0"></i>
+                                <span><strong>website design</strong> (dizajn modern & me stil)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-600 flex-shrink-0"></i>
+                                <span><strong>website development</strong> (zhvillim profesional)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-600 flex-shrink-0"></i>
+                                <span><strong>mobile optimization</strong> (100% përshtatje në celular)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-600 flex-shrink-0"></i>
+                                <span><strong>contact information</strong> & WhatsApp integration</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-600 flex-shrink-0"></i>
+                                <span><strong>Google Maps</strong> integration & udhëzime adrese</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-600 flex-shrink-0"></i>
+                                <span><strong>photo gallery</strong> (galeri me fotot e biznesit)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-600 flex-shrink-0"></i>
+                                <span><strong>social media links</strong> (Instagram, FB, TikTok)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-600 flex-shrink-0"></i>
+                                <span><strong>basic SEO</strong> (gjetja në Google)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-600 flex-shrink-0"></i>
+                                <span><strong>contact / reservation form</strong></span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-600 flex-shrink-0"></i>
+                                <span><strong>website publishing</strong> (publikimi i plotë online)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#proposal-form" class="w-full text-center bg-gradient-to-b from-brand-500 to-brand-700 hover:from-brand-600 hover:to-brand-900 text-white font-bold py-4 rounded-xl shadow-lg shadow-brand-600/25 transition-all text-base block" data-i18n="pr1_cta">
+                        GET YOUR WEBSITE
+                    </a>
+                </div>
+
+                <!-- Plus connector: creation & monthly care belong together -->
+                <div class="flex items-center justify-center py-1 lg:py-0" aria-hidden="true">
+                    <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-brand-600 text-white flex items-center justify-center shadow-lg shadow-brand-600/30 text-2xl lg:text-3xl font-black shrink-0">
+                        +
+                    </div>
+                </div>
+
+                <!-- CARD 2: WEBSITE CARE (€16/month or €160/year) -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-brand-500 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-black text-slate-900" data-i18n="pr2_name">WEBSITE CARE</h3>
+                                <p class="text-slate-500 text-sm" data-i18n="pr2_desc">Mirmëmbajtje & Hosting i Vazhdueshëm</p>
+                            </div>
+                            <span class="p-2 rounded-xl bg-slate-100 text-slate-600">
+                                <i data-lucide="shield-check" class="w-6 h-6"></i>
+                            </span>
+                        </div>
+
+                        <!-- Care Billing Toggle View -->
+                        <div class="my-6 p-4 rounded-2xl bg-brand-50/60 border border-brand-100 flex flex-col gap-1">
+                            <span class="text-4xl font-black text-slate-900" data-i18n="pr2_price_month">€16 / month</span>
+                            <span class="text-slate-600 font-semibold text-sm" data-i18n="pr2_price_year">€160 / year</span>
+                        </div>
+
+                        <p class="text-xs text-brand-700 font-bold mb-6 flex items-center gap-1.5">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500"></i>
+                            <span data-i18n="pr2_subtext">Ne kujdesemi për të gjithë pjesën teknike që uebsajti juaj të jetë gjithmonë i sigurt dhe online.</span>
+                        </p>
+
+                        <!-- Features Included Checklist -->
+                        <ul class="space-y-3.5 text-sm text-slate-700 mb-8">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-600 flex-shrink-0"></i>
+                                <span><strong>domain</strong> (emri i uebsajtit tuaj .al ose .com)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-600 flex-shrink-0"></i>
+                                <span><strong>hosting</strong> (server super i shpejtë)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-600 flex-shrink-0"></i>
+                                <span><strong>email addresses</strong> me domenin tuaj</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-600 flex-shrink-0"></i>
+                                <span><strong>email forwarding</strong> te telefoni juaj</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-600 flex-shrink-0"></i>
+                                <span><strong>regular backups</strong> (kopje sigurie të të dhënave)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-600 flex-shrink-0"></i>
+                                <span><strong>minor content changes</strong> (ndryshime të vogla teksti/çmimesh)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-600 flex-shrink-0"></i>
+                                <span><strong>technical support</strong> (mbështetje teknike direkte)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-600 flex-shrink-0"></i>
+                                <span><strong>regular website traffic report</strong> (raporte mujore vizitorësh)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#proposal-form" class="w-full text-center bg-gradient-to-b from-brand-500 to-brand-700 hover:from-brand-600 hover:to-brand-900 text-white font-bold py-4 rounded-xl shadow-lg shadow-brand-600/25 transition-all text-base block" data-i18n="pr2_cta">
+                        ZGJIDH PLANIN E MIRËMBAJTJES
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 8. CO ZÍSKÁTE / WHAT YOU GET SUMMARY -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                    <span class="text-brand-400 font-extrabold text-xs tracking-wider uppercase bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/30" data-i18n="summary_tag">PËRFITIMET KRYESORE</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-white" data-i18n="summary_title">
+                        Çfarë fiton konkretisht biznesi juaj?
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700/60 text-center space-y-2">
+                        <div class="w-12 h-12 bg-brand-500/20 text-brand-400 rounded-xl flex items-center justify-center mx-auto mb-3">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-lg" data-i18n="sum_c1_h">One professional website.</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm" data-i18n="sum_c1_p">Përfaqësim dinjitoz që frymëzon besim te çdo klient i ri.</p>
+                    </div>
+
+                    <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700/60 text-center space-y-2">
+                        <div class="w-12 h-12 bg-sky-500/20 text-sky-400 rounded-xl flex items-center justify-center mx-auto mb-3">
+                            <i data-lucide="layers" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-lg" data-i18n="sum_c2_h">One place for all your information.</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm" data-i18n="sum_c2_p">Nuk ka më pyetje të përsëritura për orarin apo lokacionin.</p>
+                    </div>
+
+                    <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700/60 text-center space-y-2">
+                        <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center mx-auto mb-3">
+                            <i data-lucide="phone-call" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-lg" data-i18n="sum_c3_h">One simple way for customers to contact you.</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm" data-i18n="sum_c3_p">Marrje kërkesash e rezervimesh direkte me 1 klik.</p>
+                    </div>
+                </div>
+
+                <!-- Short Benefit Pills -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-xs sm:text-sm text-slate-200 max-w-4xl mx-auto">
+                    <div class="flex items-center gap-2 bg-slate-800/40 px-3 py-2 rounded-lg border border-slate-700/40">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-400"></i>
+                        <span data-i18n="b1">Look more professional</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-800/40 px-3 py-2 rounded-lg border border-slate-700/40">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-400"></i>
+                        <span data-i18n="b2">Be easier to find on Google</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-800/40 px-3 py-2 rounded-lg border border-slate-700/40">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-400"></i>
+                        <span data-i18n="b3">Show your services clearly</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-800/40 px-3 py-2 rounded-lg border border-slate-700/40">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-400"></i>
+                        <span data-i18n="b4">Get more direct inquiries</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-800/40 px-3 py-2 rounded-lg border border-slate-700/40">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-400"></i>
+                        <span data-i18n="b5">Make reservations easier</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-800/40 px-3 py-2 rounded-lg border border-slate-700/40">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-400"></i>
+                        <span data-i18n="b6">All important info in one place</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. DŮVĚRA / NO RISK BANNER -->
+            <div class="mt-12 bg-amber-50 border border-amber-200 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-amber-500 text-white flex items-center justify-center flex-shrink-0 shadow-md">
+                        <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-amber-950" data-i18n="trust_title">No risk. No obligation.</h3>
+                        <p class="text-amber-900 text-sm mt-1 max-w-2xl" data-i18n="trust_desc">
+                            We will prepare a free proposal and visual concept for your website. You pay nothing before you approve the proposal and decide to continue.
+                        </p>
+                    </div>
+                </div>
+                <a href="#proposal-form" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-6 py-3 rounded-xl transition-colors whitespace-nowrap text-sm shadow-md" data-i18n="trust_btn">
+                    KËRKONI KONCEPTIN FALAS
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 10. FAQ SECTION -->
+    <section id="faq" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center space-y-4 mb-16">
+                <span class="text-brand-600 font-extrabold text-xs tracking-wider uppercase bg-brand-100/80 px-3 py-1 rounded-full" data-i18n="faq_tag">PYETJE TË SHPESHTA</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900" data-i18n="faq_title">
+                    Gjithçka që dëshironi të dini
+                </h2>
+                <p class="text-slate-600 text-base" data-i18n="faq_subtitle">
+                    Përgjigje të qarta e pa terma të komplikuar teknikë.
+                </p>
+            </div>
+
+            <!-- FAQ Accordion Items -->
+            <div class="space-y-4" id="faq-accordion">
+                
+                <!-- Q1 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(1)" class="w-full text-left px-6 py-5 flex items-center justify-between font-bold text-slate-900 hover:text-brand-600 transition-colors">
+                        <span data-i18n="q1_q">How much does a website cost?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-1" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-1" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3" data-i18n="q1_a">
+                        Starting from €160 for the basic website creation. Afterwards, website care is €16/month or €160/year including hosting, domain, SSL, email and support.
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(2)" class="w-full text-left px-6 py-5 flex items-center justify-between font-bold text-slate-900 hover:text-brand-600 transition-colors">
+                        <span data-i18n="q2_q">How long does it take?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-2" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-2" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3" data-i18n="q2_a">
+                        Typically a few days (3–7 days), depending on how quickly you provide basic information, photos and required functionality.
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(3)" class="w-full text-left px-6 py-5 flex items-center justify-between font-bold text-slate-900 hover:text-brand-600 transition-colors">
+                        <span data-i18n="q3_q">Do I need to provide the content?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-3" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-3" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3" data-i18n="q3_a">
+                        Customers provide their basic information, photos, logo and contact details. We help organize the content, edit text and prepare it professionally for the website.
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(4)" class="w-full text-left px-6 py-5 flex items-center justify-between font-bold text-slate-900 hover:text-brand-600 transition-colors">
+                        <span data-i18n="q4_q">Can my website have multiple languages?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-4" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-4" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3" data-i18n="q4_a">
+                        Yes. Websites can be created in 2–3 languages or more according to your requirements (Albanian, English, Italian, German, Czech, etc.).
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(5)" class="w-full text-left px-6 py-5 flex items-center justify-between font-bold text-slate-900 hover:text-brand-600 transition-colors">
+                        <span data-i18n="q5_q">Can customers make reservations through the website?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-5" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-5" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3" data-i18n="q5_a">
+                        Yes. A reservation form can send customer requests directly to your email or notify you directly on WhatsApp.
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(6)" class="w-full text-left px-6 py-5 flex items-center justify-between font-bold text-slate-900 hover:text-brand-600 transition-colors">
+                        <span data-i18n="q6_q">Will the website work on phones?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-6" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-6" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3" data-i18n="q6_a">
+                        Yes. Every website is custom designed and tested to work seamlessly on smartphones, tablets and desktop computers.
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(7)" class="w-full text-left px-6 py-5 flex items-center justify-between font-bold text-slate-900 hover:text-brand-600 transition-colors">
+                        <span data-i18n="q7_q">Do I need to buy hosting and a domain myself?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-7" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-7" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3" data-i18n="q7_a">
+                        No. Domain registration and fast cloud hosting are fully managed for you as part of our annual website care service.
+                    </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(8)" class="w-full text-left px-6 py-5 flex items-center justify-between font-bold text-slate-900 hover:text-brand-600 transition-colors">
+                        <span data-i18n="q8_q">Can you update my website later?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-8" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-8" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3" data-i18n="q8_a">
+                        Yes. Minor content updates (updating menu items, photos, opening hours) are included directly in the maintenance service.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 11 & 12. FINÁLNÍ CTA & FORMULAR -->
+    <section id="proposal-form" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center space-y-4 mb-12">
+                <span class="text-brand-400 font-extrabold text-xs tracking-wider uppercase bg-brand-500/10 px-3.5 py-1.5 rounded-full border border-brand-500/30" data-i18n="form_tag">MERR PROPOZIM FALAS</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white" data-i18n="form_title">
+                    Ready to give your business its own website?
+                </h2>
+                <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto" data-i18n="form_subtitle">
+                    Tell us about your business. We will prepare a free proposal and show you how your website could look — with no obligation.
+                </p>
+            </div>
+
+            <!-- Form Container Card -->
+            <div class="bg-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative">
+                
+                <!-- Success Toast Message Container -->
+                <div id="form-success-msg" class="hidden mb-6 p-6 rounded-2xl bg-emerald-500/20 border border-emerald-500/50 text-emerald-300 text-center space-y-2">
+                    <div class="w-12 h-12 bg-emerald-500 text-slate-950 rounded-full flex items-center justify-center mx-auto mb-2 font-bold">
+                        <i data-lucide="check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white" data-i18n="form_success_h">Faleminderit! Dërgesa u krye me sukses.</h3>
+                    <p class="text-sm text-emerald-200" data-i18n="form_success_p">Ekipi ynë do t'ju kontaktojë së shpejti me propozimin vizual falas!</p>
+                </div>
+
+                <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Field 1: Name -->
+                        <div>
+                            <label for="f-name" class="block text-xs font-bold uppercase text-slate-400 mb-2" data-i18n="f_name">Emri Juaj *</label>
+                            <input id="f-name" name="name" type="text" required placeholder="p.sh. Alban Hoxha" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors text-sm">
+                        </div>
+
+                        <!-- Field 2: Business Name -->
+                        <div>
+                            <label for="f-business" class="block text-xs font-bold uppercase text-slate-400 mb-2" data-i18n="f_biz">Emri i Biznesit *</label>
+                            <input id="f-business" name="business" type="text" required placeholder="p.sh. Restorant Vila Blloku" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors text-sm">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Field 3: Business Type -->
+                        <div>
+                            <label for="f-type" class="block text-xs font-bold uppercase text-slate-400 mb-2" data-i18n="f_type">Lloji i Biznesit *</label>
+                            <select id="f-type" name="businessType" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 transition-colors text-sm">
+                                <option value="" disabled selected data-i18n="f_select">Zgjidhni llojin...</option>
+                                <option value="Restaurant / Bar">Restaurant / Bar / Cafe</option>
+                                <option value="Hotel / Apartment">Hotel / Guest House / Apartment</option>
+                                <option value="Tourism">Tourism / Tour Agency</option>
+                                <option value="Real Estate">Real Estate</option>
+                                <option value="Beauty / Salon">Beauty Salon / Barber Shop</option>
+                                <option value="Local Service">Local Service / Auto Service</option>
+                                <option value="Shop / Retail">Shop / Retail Store</option>
+                                <option value="Other">Tjetër / Small Business</option>
+                            </select>
+                        </div>
+
+                        <!-- Field 4: Phone / WhatsApp -->
+                        <div>
+                            <label for="f-phone" class="block text-xs font-bold uppercase text-slate-400 mb-2" data-i18n="f_phone">Numri i Telefonit / WhatsApp *</label>
+                            <input id="f-phone" name="phone" type="tel" required placeholder="+355 69 ..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors text-sm">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Field 5: Email -->
+                        <div>
+                            <label for="f-email" class="block text-xs font-bold uppercase text-slate-400 mb-2" data-i18n="f_email">Email Adresa *</label>
+                            <input id="f-email" name="email" type="email" required placeholder="emri@biznesi.al" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors text-sm">
+                        </div>
+
+                        <!-- Field 6: Existing Social / Web -->
+                        <div>
+                            <label for="f-social" class="block text-xs font-bold uppercase text-slate-400 mb-2" data-i18n="f_social">Faqja e sotme (Instagram, FB, ose Google)</label>
+                            <input id="f-social" name="social" type="text" placeholder="instagram.com/biznesi_juaj" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors text-sm">
+                        </div>
+                    </div>
+
+                    <!-- Field 8: Message -->
+                    <div>
+                        <label for="f-message" class="block text-xs font-bold uppercase text-slate-400 mb-2" data-i18n="f_msg">Mesazh apo detaje shtesë (opsionale)</label>
+                        <textarea id="f-message" name="message" rows="3" placeholder="Na tregoni me pak fjalë se si e imagjinoni uebsajtin tuaj..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors text-sm"></textarea>
+                    </div>
+
+                    <!-- Form Submit CTA -->
+                    <button type="submit" class="w-full bg-gradient-to-b from-brand-500 to-brand-700 hover:from-brand-600 hover:to-brand-900 text-white font-black py-4 rounded-xl shadow-xl shadow-brand-500/20 transition-all text-base flex items-center justify-center gap-2">
+                        <i data-lucide="sparkles" class="w-5 h-5"></i>
+                        <span data-i18n="f_submit">GET MY FREE PROPOSAL</span>
+                    </button>
+
+                    <p class="text-center text-xs text-slate-500" data-i18n="f_disclaimer">
+                        * Nuk keni asnjë detyrim apo shpenzim. Koncepti është 100% falas.
+                    </p>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white">
+                        <i data-lucide="globe" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold tracking-tight">Besa<span class="text-brand-500">Web</span></span>
+                        <p class="text-xs text-slate-500">Tiranë • Vlorë • Durrës • Sarandë • Shkodër</p>
+                    </div>
+                </div>
+
+                <div class="text-xs text-center md:text-right text-slate-500">
+                    <p>© 2026 BesaWeb. All rights reserved.</p>
+                    <p class="mt-1" data-i18n="ft_motto">Uebsajte moderne e profesionale për bizneset shqiptare.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE BOTTOM BAR -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 p-3 md:hidden flex items-center justify-between gap-3">
+        <div class="pl-2">
+            <span class="text-xs text-slate-400 block" data-i18n="stick_label">Uebsajte nga</span>
+            <span class="text-white font-extrabold text-base" data-i18n="stick_price">€160</span>
+        </div>
+        <a href="#proposal-form" class="flex-1 bg-gradient-to-b from-brand-500 to-brand-700 hover:from-brand-600 hover:to-brand-900 text-white font-bold py-2.5 px-4 rounded-xl text-xs sm:text-sm text-center shadow-lg shadow-brand-500/20" data-i18n="stick_cta">
+            GET A FREE PROPOSAL
+        </a>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Translation Dictionary (SQ, EN, CZ)
+        const i18nData = {
+            sq: {
+                nav_why: "Pse uebsajt?",
+                nav_features: "Çfarë përfshin",
+                nav_sectors: "Për kë është",
+                nav_process: "Si funksionon",
+                nav_pricing: "Çmimi",
+                nav_faq: "Pyetje",
+                nav_cta: "MERR PROPOZIM FALAS",
+                
+                hero_badge: "100% Pa Rrezik • Së pari merrni konceptin falas!",
+                hero_title: "Biznesi juaj meriton uebsajtin e vet me emër e dinjitet.",
+                hero_subtitle: "Uebsajte moderne, të lira dhe të shpejta që duken shkëlqyeshëm, gjenden lehtë në Google dhe ju ndihmojnë të fitoni klientë të rinj.",
+                hero_check1: "Çmimi fiks 15 000 LEK",
+                hero_check2: "Propozimi 100% Falas",
+                hero_check3: "Gati në pak ditë",
+                hero_cta_secondary: "MERR PROPOZIM FALAS",
+                hero_guarantee_text: "* Nuk keni asnjë detyrim financiar. Paguani vetëm pasi të miratoni dizajnin përfundimtar!",
+                hero_mock_domain: "domenijuaj.al",
+                hero_mock_tag: "RESTORANT & BAR",
+                hero_mock_hours: "Hapur sot",
+                hero_mock_lang: "Gjuhët",
+                hero_mock_contact: "Rezervo",
+                hero_mock_btn_reserve: "Rezervo Tavolinë",
+                hero_float_label: "Prani Profesionale",
+                hero_float_val: "Dizajn Zyrtar & Modern",
+
+                prob_tag: "DILEMA E BIZNESIT",
+                prob_title: "Klientët tuaj po ju kërkojnë çdo ditë në internet.",
+                prob_desc: "Mediat sociale janë një mjet i shkëlqyer, por nuk janë karta juaj dixhitale e identifikimit. Do të arrini shumë klientë përmes Instagram ose Facebook - por jo të gjithë. Kur dikush ju kërkon në Google, faqja juaj e internetit u ofron atyre një vend të qartë dhe të besueshëm për të gjetur gjithçka që u nevojitet: shërbimet, fotot, orarin e hapjes, vendndodhjen dhe informacionin e kontaktit - pa pasur nevojë të kërkojnë nëpër platforma të ndryshme.",
+                prob_social_badge: "Vetëm Rrjetet Sociale",
+                prob_social_h: "Informacion i shpërndarë kudo",
+                prob_social_p: "Shumë klientë përdorin Instagram e Facebook, por JO TË GJITHË. Për më tepër, çmimet, menuja apo orari i punës shpesh humbasin mes dhjetëra postimeve të vjetra.",
+                prob_social_li1: "Klientët duhet të kërkojnë në disa vende për të gjetur orarin ose numrin.",
+                prob_social_li2: "Turistët e huaj shpesh kërkojnë vetëm në Google, jo në Instagram local.",
+                prob_social_li3: "Pamje jo tërësisht profesionale për përfaqësim biznesi serioz.",
+                prob_social_footer: "Rrjetet sociale janë mjet i mirë, por jo shtëpia e vetme e biznesit tuaj.",
+                prob_web_badge: "Uebsajti Juaj Zyrtar",
+                prob_web_h: "Një vend i vetëm profesional për të gjithë",
+                prob_web_p: "Kur njerëzit kërkojnë për biznesin tuaj në Google, uebsajti juaj u jep një hapësirë zyrtare ku gjejnë menjëherë shërbimet, fotot, çmimet, orarin dhe vendndodhjen.",
+                prob_web_li1: "Vendndodhja në Google Maps dhe navigimi direkt me 1 klik.",
+                prob_web_li2: "Përmbajtje shumëgjuhëshe (Shqip, Anglisht, Italisht etj.) për turistë.",
+                prob_web_li3: "Formular rezervimi direkt në email apo në WhatsApp-in tuaj.",
+                prob_web_footer: "Baza digjitale e sigurt e biznesit tuaj.",
+
+                feat_tag: "Gjithçka e Përfshirë",
+                feat_title: "Gjithçka që u nevojitet klientëve tuaj — në një vend.",
+                feat_subtitle: "Paketa jonë e kompletuar përfshin të gjitha funksionalitetet e nevojshme për një prani profesionale në internet.",
+
+                f1_title: "UEBSAJT SHUMËGJUHËSH",
+                f1_desc: "Uebsajti i disponueshëm në 2-3 gjuhë sipas nevojave tuaja (Shqip, Anglisht, Italisht etj.).",
+                f2_title: "PREZANTIMI I BIZNESIT",
+                f2_desc: "Prezantoni kompaninë, shërbimet, përvojën dhe atë që e bën biznesin tuaj të veçantë.",
+                f3_title: "SHËRBIME / MENU",
+                f3_desc: "Tregoni qartë shërbimet, produktet, ushqimet dhe çmimet tuaja në mënyrë estetike.",
+                f4_title: "GALERI FOTOGRAFISH",
+                f4_desc: "Ekspozoni ambientin e brendshëm, të jashtëm, produktet, ekipin apo punët tuaja të mëparshme.",
+                f5_title: "GOOGLE MAPS",
+                f5_desc: "Ndihmoni klientët t'ju gjejnë lehtësisht dhe të marrin udhëzimet e hartës me një klik.",
+                f6_title: "ORARI I PUNËS",
+                f6_desc: "Tregoni qartë orarin se kur klientët mund t'ju vizitojnë ose të komunikojnë me ju.",
+                f7_title: "KONTAKT & RRJETE SOCIALE",
+                f7_desc: "Telefon, email, Instagram, Facebook, Messenger, WhatsApp dhe kanale të tjera komunikimi.",
+                f8_title: "FORMULAR REZERVIMI",
+                f8_desc: "Klientët mund të dërgojnë një kërkesë për rezervim direkt në email-in apo telefonin tuaj.",
+                f9_title: "OPTIMIZIM PËR CELULAR",
+                f9_desc: "Pamje e përsosura dhe e shpejtë në celularë, tableta si dhe kompjuterë desktop.",
+                f10_title: "SEO BAZË",
+                f10_desc: "Optimizim bazë për motorët e kërkimit për t'u gjetur lehtësisht nga klientët në Google.",
+                f11_title: "RAPORT MUJOR VIZITASH",
+                f11_desc: "Raport i rregullt që tregon sa njerëz e vizituan uebsajtin tuaj dhe nga erdhën ata.",
+                f12_title: "VLERËSIME NGA GOOGLE",
+                f12_desc: "Shfaqni vlerësimin mesatar dhe numrin e recensioneve nga Google si dëshmi e kënaqësisë së klientëve.",
+
+                sec_tag: "SEKTORËT TË CILËT SHËRBENI",
+                sec_title: "Perfekt për bizneset e vogla dhe në rritje",
+                sec_subtitle: "Kemi përvojë të dedikuar me sektorët më kryesorë të sipërmarrjes në Shqipëri.",
+                sec_r1: "Restorante & Bare", sec_r1_sub: "Menu digjitale, adresa, rezervime",
+                sec_r2: "Hotele & Apartamente", sec_r2_sub: "Dhoma, fotogaleri, rezervime direkte",
+                sec_r3: "Turizëm & Ekskursione", sec_r3_sub: "Turat, itineraret, kontakt shumëgjuhësh",
+                sec_r4: "Pasuri të Paluajtshme", sec_r4_sub: "Listimi i pronave, kontaktet e agjentëve",
+                sec_r5: "Bukuri & Berber", sec_r5_sub: "Caktim orari, shërbimet, lista e çmimeve",
+                sec_r6: "Shërbime Lokale & Auto", sec_r6_sub: "Autoservis, mecanicë, punë me dorë",
+                sec_r7: "Institucione Shëndetësore", sec_r7_sub: "Klinika dentare dhe estetike",
+                sec_r8: "Biznese të Vogla", sec_r8_sub: "Startups dhe biznese të reja në treg",
+
+                how_tag: "PROCES I THJESHTË",
+                how_title: "Si funksionon krijimi i uebsajtit?",
+                how_subtitle: "Proces transparent me 4 hapa të lehtë pa asnjë rrezik apo detyrim paraprak.",
+                step1_title: "01 — NA KONTAKTONI", step1_desc: "Na tregoni për biznesin tuaj dhe çfarë ju nevojitet.",
+                step2_title: "02 — PROPOZIM FALAS", step2_desc: "Përgatisim një propozim falas dhe konceptin vizual për uebsajtin tuaj.",
+                step3_title: "03 — MIRATONI", step3_desc: "Ju vendosni nëse doni të vazhdoni. Pa asnjë detyrim.",
+                step4_title: "04 — UEBSAJTI PUBLIKOHET", step4_desc: "Krijojmë, publikojmë dhe konfigurojmë uebsajtin tuaj.",
+                how_guarantee_notice: "Paguani vetëm pasi të miratoni propozimin dhe vendosni të vazhdoni.",
+
+                price_tag: "OFERTA FINANCIARE",
+                price_title: "Një uebsajt profesional pa çmimin e një agjencie.",
+                price_subtitle: "Çmime krejtësisht transparente pa kosto të fshehura apo surpriza.",
+                pr1_name: "KRIJIMI I UEBSAJTIT", pr1_desc: "Dizajn & Zhvillim Kompleti i Uebsajtit", pr1_type: "Pagesë vetëm një herë", pr1_subtext: "Paguani vetëm mbasi të keni parë dhe miratuar dizajnin!", pr1_cta: "MERR UEBSAJTIN TËND", pr1_price: "15 000 LEK",
+                pr2_name: "KUJDESI I UEBSAJTIT", pr2_desc: "Mirëmbajtje & Hosting i Vazhdueshëm", pr2_subtext: "Ne kujdesemi për të gjithë pjesën teknike që uebsajti juaj të jetë gjithmonë online.", pr2_cta: "ZGJIDH PLANIN E MIRËMBAJTJES", pr2_price_month: "1 500 LEK / muaj", pr2_price_year: "18 000 LEK / vit",
+
+                summary_tag: "PËRFITIMET KRYESORE",
+                summary_title: "Çfarë fiton konkretisht biznesi juaj?",
+                sum_c1_h: "Një uebsajt profesional.", sum_c1_p: "Përfaqësim dinjitoz që frymëzon besim te çdo klient i ri.",
+                sum_c2_h: "Një vend i vetëm për të gjithë informacionin tuaj.", sum_c2_p: "Nuk ka më pyetje të përsëritura për orarin apo lokacionin.",
+                sum_c3_h: "Një mënyrë e thjeshtë për klientët t'ju kontaktojnë.", sum_c3_p: "Marrje kërkesash e rezervimesh direkte me 1 klik.",
+
+                b1: "Dukeni më profesionalë", b2: "Gjendeni më lehtë në Google", b3: "Tregoni qartë shërbimet tuaja",
+                b4: "Merrni më shumë kërkesa direkte", b5: "Lehtësoni rezervimet", b6: "Gjithë informacioni i rëndësishëm në një vend",
+
+                trust_title: "Pa rrezik. Pa detyrim.",
+                trust_desc: "Do të përgatisim një propozim falas dhe konceptin vizual për uebsajtin tuaj. Nuk paguani asgjë përpara se të miratoni propozimin dhe të vendosni të vazhdoni.",
+                trust_btn: "KËRKONI KONCEPTIN FALAS",
+
+                faq_tag: "PYETJE TË SHPESHTA",
+                faq_title: "Gjithçka që dëshironi të dini",
+                faq_subtitle: "Përgjigje të qarta e pa terma të komplikuar teknikë.",
+
+                q1_q: "Sa kushton një uebsajt?", q1_a: "Duke filluar nga 15 000 LEK për uebsajtin bazë. Më pas, kujdesi i uebsajtit është 1 500 LEK/muaj ose 18 000 LEK/vit, duke përfshirë hosting, domain, SSL, email dhe mbështetje.",
+                q2_q: "Sa kohë zgjat procesi?", q2_a: "Zakonisht disa ditë, në varësi të sasisë së përmbajtjes dhe funksionaliteteve të kërkuara.",
+                q3_q: "A duhet të siguroj vetë përmbajtjen?", q3_a: "Klientët sigurojnë informacionin bazë, foto, logo dhe të dhënat e kontaktit. Ne ndihmojmë të organizojmë përmbajtjen dhe ta përgatisim për uebsajtin.",
+                q4_q: "A mund të ketë uebsajti im disa gjuhë?", q4_a: "Po. Uebsajtet mund të krijohen në 2-3 gjuhë ose më shumë, sipas kërkesave tuaja.",
+                q5_q: "A mund të bëjnë klientët rezervime nëpërmjet uebsajtit?", q5_a: "Po. Formulari i rezervimit dërgon kërkesën e klientit direkt në emailin tuaj.",
+                q6_q: "A do të funksionojë uebsajti në telefona?", q6_a: "Po. Çdo uebsajt është dizajnuar të funksionojë në telefona, tableta dhe kompjuterë.",
+                q7_q: "A duhet të blej vetë hosting dhe domain?", q7_a: "Jo. Domain dhe hosting mund të menaxhohen për ju si pjesë e kujdesit vjetor të uebsajtit.",
+                q8_q: "A mund ta përditësoni uebsajtin tim më vonë?", q8_a: "Po. Ndryshimet e vogla të përmbajtjes përfshihen në shërbimin e mirëmbajtjes.",
+
+                form_tag: "MERR PROPOZIM FALAS",
+                form_title: "Gati ta pajisni biznesin tuaj me uebsajtin e vet?",
+                form_subtitle: "Na tregoni për biznesin tuaj. Do të përgatisim një propozim falas dhe do t'ju tregojmë si mund të duket uebsajti juaj — pa asnjë detyrim.",
+                form_success_h: "Faleminderit! Dërgesa u krye me sukses.",
+                form_success_p: "Ekipi ynë do t'ju kontaktojë së shpejti me propozimin vizual falas!",
+                f_name: "Emri Juaj *", f_biz: "Emri i Biznesit *", f_type: "Lloji i Biznesit *", f_select: "Zgjidhni llojin...",
+                f_phone: "Numri i Telefonit / WhatsApp *", f_email: "Email Adresa *", f_social: "Faqja e sotme (Instagram, FB, Google)",
+                f_msg: "Mesazh apo detaje shtesë (opsionale)", f_submit: "MË DËRGO PROPOZIMIN FALAS", f_disclaimer: "* Nuk keni asnjë detyrim apo shpenzim. Koncepti është 100% falas.",
+
+                ft_motto: "Uebsajte moderne e profesionale për bizneset shqiptare.",
+                stick_label: "Uebsajte nga", stick_cta: "MERR PROPOZIM FALAS", stick_price: "15 000 LEK"
+            },
+            en: {
+                nav_why: "Why Website?",
+                nav_features: "Features",
+                nav_sectors: "For Whom",
+                nav_process: "How it Works",
+                nav_pricing: "Pricing",
+                nav_faq: "FAQ",
+                nav_cta: "GET A FREE PROPOSAL",
+
+                hero_badge: "100% Risk Free • Free Design Proposal First!",
+                hero_title: "Your Business Deserves Its Own Website.",
+                hero_subtitle: "Modern, affordable, fast websites that look great, get found on Google, and help you win new customers.",
+                hero_check1: "Fixed €160 price",
+                hero_check2: "100% Free Proposal",
+                hero_check3: "Ready in a few days",
+                hero_cta_secondary: "GET A FREE PROPOSAL",
+                hero_guarantee_text: "* No financial risk. Pay only after approving the final visual design!",
+                hero_mock_domain: "yourdomain.al",
+                hero_mock_tag: "RESTORANT & BAR",
+                hero_mock_hours: "Open today",
+                hero_mock_lang: "Languages",
+                hero_mock_contact: "Book",
+                hero_mock_btn_reserve: "Reserve Table",
+                hero_float_label: "Professional Presence",
+                hero_float_val: "Official & Modern Design",
+
+                prob_tag: "BUSINESS DILEMMA",
+                prob_title: "Your customers are already looking for you online.",
+                prob_desc: "Social media is a great tool, but it isn't your digital ID card. You'll reach many customers through Instagram or Facebook — but not everyone. When someone searches for you on Google, your website gives them a clear, trustworthy place to find everything they need: services, photos, opening hours, location and contact details — without having to search across different platforms.",
+                prob_social_badge: "Social Media Alone",
+                prob_social_h: "Fragmented Information Everywhere",
+                prob_social_p: "Many customers use social media, but not everyone does. When people search for your business on Google, social posts get buried.",
+                prob_social_li1: "Customers must search multiple places to find opening hours or prices.",
+                prob_social_li2: "Foreign tourists often search only on Google, not local Instagram.",
+                prob_social_li3: "Lacks the official authority of an established business.",
+                prob_social_footer: "Social media is great, but it shouldn't be your only digital home.",
+                prob_web_badge: "Your Official Website",
+                prob_web_h: "Everything your customers need — in one place.",
+                prob_web_p: "When people search for your business on Google, your own website gives you one professional place where customers find your services, photos, hours and contact.",
+                prob_web_li1: "Direct Google Maps integration for 1-click directions.",
+                prob_web_li2: "Multilingual content (Albanian, English, Italian, etc.) for tourists.",
+                prob_web_li3: "Direct booking form sent to your email or WhatsApp.",
+                prob_web_footer: "Your business's reliable digital anchor.",
+
+                feat_tag: "ALL INCLUDED",
+                feat_title: "Everything your customers need — in one place.",
+                feat_subtitle: "Our complete package includes all features necessary for a premium web presence.",
+
+                f1_title: "MULTILINGUAL WEBSITE", f1_desc: "Website available in 2–3 languages according to your needs.",
+                f2_title: "BUSINESS PRESENTATION", f2_desc: "Present your company, services, experience and what makes you different.",
+                f3_title: "SERVICES / MENU", f3_desc: "Clearly show your services, products, meals and prices.",
+                f4_title: "PHOTO GALLERY", f4_desc: "Show your interior, exterior, products, team or previous work.",
+                f5_title: "GOOGLE MAPS", f5_desc: "Help customers easily find your business and get directions.",
+                f6_title: "OPENING HOURS", f6_desc: "Clearly show when customers can visit or contact you.",
+                f7_title: "CONTACT & SOCIAL MEDIA", f7_desc: "Phone, email, Instagram, Facebook, Messenger, WhatsApp and other channels.",
+                f8_title: "RESERVATION FORM", f8_desc: "Customers can send a reservation request directly to your email.",
+                f9_title: "MOBILE OPTIMIZATION", f9_desc: "Perfect display on smartphones, tablets and desktop computers.",
+                f10_title: "BASIC SEO", f10_desc: "Basic search engine optimization to help customers find your website on Google.",
+                f11_title: "MONTHLY TRAFFIC REPORT", f11_desc: "Receive a regular report showing how many people visited your website.",
+                f12_title: "GOOGLE REVIEWS", f12_desc: "Display your average rating and number of Google reviews as proof of customer satisfaction.",
+
+                sec_tag: "TARGET INDUSTRIES",
+                sec_title: "Perfect for small and growing businesses",
+                sec_subtitle: "We have dedicated experience in Albania's core business sectors.",
+                sec_r1: "Restaurants & Bars", sec_r1_sub: "Digital menu, location, reservations",
+                sec_r2: "Hotels & Apartments", sec_r2_sub: "Rooms, gallery, direct booking",
+                sec_r3: "Tourism & Tours", sec_r3_sub: "Tours, itineraries, multilingual contact",
+                sec_r4: "Real Estate", sec_r4_sub: "Property listings, agent contacts",
+                sec_r5: "Beauty & Barber", sec_r5_sub: "Booking hours, services, price list",
+                sec_r6: "Local Services & Auto", sec_r6_sub: "Auto repair, mechanics, crafts",
+                sec_r7: "Healthcare Facilities", sec_r7_sub: "Dental and aesthetic clinics",
+                sec_r8: "Small Businesses", sec_r8_sub: "Startups and new market entrants",
+
+                how_tag: "SIMPLE PROCESS",
+                how_title: "How it works?",
+                how_subtitle: "Transparent 4-step process with zero risk or upfront payment.",
+                step1_title: "01 — CONTACT US", step1_desc: "Tell us about your business and what you need.",
+                step2_title: "02 — FREE PROPOSAL", step2_desc: "We prepare a free proposal and visual concept for your website.",
+                step3_title: "03 — APPROVE", step3_desc: "You decide whether you want to continue. No obligation.",
+                step4_title: "04 — YOUR WEBSITE GOES LIVE", step4_desc: "We create, publish and configure your website.",
+                how_guarantee_notice: "You pay only after approving the proposal and deciding to proceed.",
+
+                price_tag: "PRICING PLAN",
+                price_title: "A professional website without the agency price.",
+                price_subtitle: "Completely transparent pricing with no hidden costs.",
+                pr1_name: "WEBSITE CREATION", pr1_desc: "Complete Web Design & Development", pr1_type: "One-time payment", pr1_subtext: "Pay only after approving the proposal and deciding to proceed!", pr1_cta: "GET YOUR WEBSITE", pr1_price: "€160",
+                pr2_name: "WEBSITE CARE", pr2_desc: "Ongoing Maintenance & Fast Hosting", pr2_subtext: "We manage all technical aspects to keep your website fast and secure.", pr2_cta: "SELECT CARE PLAN", pr2_price_month: "€16 / month", pr2_price_year: "€160 / year",
+
+                summary_tag: "KEY ADVANTAGES",
+                summary_title: "What your business gets",
+                sum_c1_h: "One professional website.", sum_c1_p: "Reputable digital presence inspiring trust in new clients.",
+                sum_c2_h: "One place for all your information.", sum_c2_p: "No more repetitive calls asking for location or hours.",
+                sum_c3_h: "One simple way for customers to contact you.", sum_c3_p: "Direct booking requests in 1 click.",
+
+                b1: "Look more professional", b2: "Be easier to find on Google", b3: "Show your services clearly",
+                b4: "Get more direct inquiries", b5: "Make reservations easier", b6: "All important info in one place",
+
+                trust_title: "No risk. No obligation.",
+                trust_desc: "We will prepare a free proposal and visual concept for your website. You pay nothing before you approve the proposal and decide to continue.",
+                trust_btn: "GET MY FREE PROPOSAL",
+
+                faq_tag: "FREQUENTLY ASKED QUESTIONS",
+                faq_title: "Everything you need to know",
+                faq_subtitle: "Clear answers without complicated technical jargon.",
+
+                q1_q: "How much does a website cost?", q1_a: "Starting from €160 for the basic website. Afterwards, website care is €16/month or €160/year including hosting, domain, SSL, email and support.",
+                q2_q: "How long does it take?", q2_a: "Typically a few days, depending on the amount of content and required functionality.",
+                q3_q: "Do I need to provide the content?", q3_a: "Customers provide their basic information, photos, logo and contact details. We help organize the content and prepare it for the website.",
+                q4_q: "Can my website have multiple languages?", q4_a: "Yes. Websites can be created in 2–3 languages or more according to your requirements.",
+                q5_q: "Can customers make reservations through the website?", q5_a: "Yes. A reservation form can send the customer's request directly to your email.",
+                q6_q: "Will the website work on phones?", q6_a: "Yes. Every website is designed to work on smartphones, tablets and desktop computers.",
+                q7_q: "Do I need to buy hosting and a domain myself?", q7_a: "No. Domain and hosting can be managed for you as part of the annual website care service.",
+                q8_q: "Can you update my website later?", q8_a: "Yes. Minor content changes are included in the maintenance service.",
+
+                form_tag: "FREE PROPOSAL",
+                form_title: "Ready to give your business its own website?",
+                form_subtitle: "Tell us about your business. We will prepare a free proposal and show you how your website could look — with no obligation.",
+                form_success_h: "Thank you! Your request has been sent.",
+                form_success_p: "Our team will contact you shortly with your free visual design proposal!",
+                f_name: "Your Name *", f_biz: "Business Name *", f_type: "Business Type *", f_select: "Select type...",
+                f_phone: "Phone / WhatsApp *", f_email: "Email Address *", f_social: "Current Page (Instagram, FB, Google)",
+                f_msg: "Message or details (optional)", f_submit: "GET MY FREE PROPOSAL", f_disclaimer: "* Zero risk or obligation. Free proposal first.",
+
+                ft_motto: "Modern and professional websites for Albanian businesses.",
+                stick_label: "Websites from", stick_cta: "GET A FREE PROPOSAL", stick_price: "€160"
+            },
+            cz: {
+                nav_why: "Proč web?",
+                nav_features: "Co obsahuje",
+                nav_sectors: "Pro koho",
+                nav_process: "Jak to funguje",
+                nav_pricing: "Ceník",
+                nav_faq: "FAQ",
+                nav_cta: "NÁVRH ZDARMA",
+
+                hero_badge: "100% Bez Rizika • Nejdříve dostanete návrh zdarma!",
+                hero_title: "Váš podnik si zaslouží vlastní profesionální web.",
+                hero_subtitle: "Moderní, levné a rychlé webové stránky, které skvěle vypadají, jsou vidět na Googlu a pomáhají získávat nové zákazníky.",
+                hero_check1: "Pevná cena €160",
+                hero_check2: "Návrh 100% zdarma",
+                hero_check3: "Hotovo za pár dní",
+                hero_cta_secondary: "ZÍSKAT NABÍDKU ZDARMA",
+                hero_guarantee_text: "* Žádné riziko. Platíte až po schválení finálního vizuálního návrhu!",
+                hero_mock_domain: "vašedomena.al",
+                hero_mock_tag: "RESTAURACE & BAR",
+                hero_mock_hours: "Otevřeno",
+                hero_mock_lang: "Jazyky",
+                hero_mock_contact: "Rezervace",
+                hero_mock_btn_reserve: "Rezervovat stůl",
+                hero_float_label: "Profesionální prezentace",
+                hero_float_val: "Oficiální & Moderní design",
+
+                prob_tag: "PODNIKATELSKÉ DILEMA",
+                prob_title: "Zákazníci vás již hledají na internetu.",
+                prob_desc: "Sociální sítě jsou skvělým nástrojem, ale nejsou vaší digitální vizitkou. Přes Instagram nebo Facebook oslovíte spoustu zákazníků – ale ne všechny. Když vás někdo hledá na Googlu, váš web mu nabídne jasné a důvěryhodné místo, kde najde vše, co potřebuje: služby, fotky, otevírací dobu, polohu i kontaktní údaje – aniž by musel pátrat na různých platformách.",
+                prob_social_badge: "Pouze sociální sítě",
+                prob_social_h: "Informace rozptýlené všude možně",
+                prob_social_p: "Mnoho zákazníků používá sociální sítě, ale ne všichni. Když vás lidé hledají na Googlu, sociální sítě nestačí.",
+                prob_social_li1: "Zákazníci musí složitě dohledávat otevírací dobu či ceníky.",
+                prob_social_li2: "Zahraniční turisté hledají primárně na Googlu, ne na lokálním Instagramu.",
+                prob_social_li3: "Působí méně oficiálně oproti zavedené konkurenci.",
+                prob_social_footer: "Sociální sítě jsou dobrý doplněk, ale ne jediný domov vaší firmy.",
+                prob_web_badge: "Váš Oficiální Web",
+                prob_web_h: "Vše na jednom přehledném místě",
+                prob_web_p: "Vlastní web dává zákazníkům jedno oficiální místo, kde najdou služby, fotky, otevírací dobu, ceník i kontakt.",
+                prob_web_li1: "Propojení s Google Maps pro navigaci 1 kliknutím.",
+                prob_web_li2: "Vícejazyčný obsah (Albánština, Angličtina, Italština atd.) pro turisty.",
+                prob_web_li3: "Rezervační formulář přímo na váš email či WhatsApp.",
+                prob_web_footer: "Stabilní digitální základ vašeho podnikání.",
+
+                feat_tag: "VŠECHNO V CENĚ",
+                feat_title: "Vše, co vaši zákazníci potřebují — na jednom místě.",
+                feat_subtitle: "Kompletní balíček se vším potřebným pro prémiovou prezentaci.",
+
+                f1_title: "VÍCEJAZYČNÝ WEB", f1_desc: "Web dostupný ve 2–3 jazycích podle vašich potřeb.",
+                f2_title: "PREZENTACE FIRMY", f2_desc: "Prezentujte vaši firmu, služby, zkušenosti a výhody.",
+                f3_title: "SLUŽBY / MENU", f3_desc: "Prezentujte přehledně vaše služby, produkty, menu a ceník.",
+                f4_title: "FOTOGALERIE", f4_desc: "Ukažte interiér, exteriér, produkty i předchozí práci.",
+                f5_title: "GOOGLE MAPS", f5_desc: "Pomozte zákazníkům snadno vás najít a spustit navigaci.",
+                f6_title: "OTEVÍRACÍ DOBA", f6_desc: "Jasně zobrazte otevírací dobu a čas pro kontakt.",
+                f7_title: "KONTAKT & SOCIÁLNÍ SÍTĚ", f7_desc: "Telefon, email, Instagram, Facebook, WhatsApp a další.",
+                f8_title: "REZERVAČNÍ FORMULÁŘ", f8_desc: "Zákazníci mohou poslat žádost o rezervaci přímo na email.",
+                f9_title: "OPTIMALIZACE PRO MOBIL", f9_desc: "Perfektní zobrazení na mobilech, tabletech i počítačích.",
+                f10_title: "ZÁKLADNÍ SEO", f10_desc: "Základní optimalizace, aby vás zákazníci našli na Googlu.",
+                f11_title: "MĚSÍČNÍ REPORT NÁVŠTĚVNOSTI", f11_desc: "Pravidelný přehled o návštěvnosti vašeho webu.",
+                f12_title: "GOOGLE HODNOCENÍ", f12_desc: "Zobrazte průměrné hodnocení a počet recenzí z Googlu jako důkaz spokojenosti zákazníků.",
+
+                sec_tag: "CÍLOVÉ OBORY",
+                sec_title: "Ideální pro malé a rostoucí firmy",
+                sec_subtitle: "Máme zkušenosti se všemi klíčovými sektory podnikání v Albánii.",
+                sec_r1: "Restaurace & Bary", sec_r1_sub: "Digitální menu, adresa, rezervace",
+                sec_r2: "Hotely & Apartmány", sec_r2_sub: "Pokoje, fotogalerie, přímé rezervace",
+                sec_r3: "Cestovní Agentury", sec_r3_sub: "Výlety, itineráře, vícejazyčný kontakt",
+                sec_r4: "Realitní Kanceláře", sec_r4_sub: "Nabídka nemovitostí, makléři",
+                sec_r5: "Salóny & Barber", sec_r5_sub: "Rezervace termínů, ceník služeb",
+                sec_r6: "Služby & Autoservis", sec_r6_sub: "Opravny, řemeslníci, kontakty",
+                sec_r7: "Zdravotnická zařízení", sec_r7_sub: "Zubní, dentální a estetické kliniky",
+                sec_r8: "Malé Firmy", sec_r8_sub: "Nové podniky a startups na trhu",
+
+                how_tag: "JEDNODUCHÝ PROCES",
+                how_title: "Jak vytvoření webu probíhá?",
+                how_subtitle: "Transparentní proces ve 4 krocích bez rizika.",
+                step1_title: "01 — KONTAKTUJTE NÁS", step1_desc: "Napište nam o vašem podnikání a potřebách.",
+                step2_title: "02 — NABÍDKA ZDARMA", step2_desc: "Připravíme nezávazný grafický návrh zdarma.",
+                step3_title: "03 — SCHVÁLENÍ", step3_desc: "Rozhodnete se, zda chcete pokračovat. Bez závazku.",
+                step4_title: "04 — WEB JDE DO PROVOZU", step4_desc: "Vytvoříme, nastavíme a spustíme váš web.",
+                how_guarantee_notice: "Platíte až po schválení návrhu a rozhodnutí pokračovat.",
+
+                price_tag: "CENOVÁ NABÍDKA",
+                price_title: "Profesionální web bez agenturních přirážek.",
+                price_subtitle: "Zcela transparentní ceny bez skrytých poplatků.",
+                pr1_name: "TVORBA WEBU", pr1_desc: "Kompletní návrh a vývoj webu", pr1_type: "Jednorázová platba", pr1_subtext: "Platba až po schválení návrhu a rozhodnutí pokračovat!", pr1_cta: "ZÍSKEJTE SVŮJ WEB", pr1_price: "€160",
+                pr2_name: "PÉČE O WEB", pr2_desc: "Správa, Hosting & Podpora", pr2_subtext: "Staráme se o kompletní technické zázemí a bezpečnost webu.", pr2_cta: "VYBRAT SPRÁVU WEBU", pr2_price_month: "€16 / měsíc", pr2_price_year: "€160 / rok",
+
+                summary_tag: "KLÍČOVÉ VÝHODY",
+                summary_title: "Co přesně získáte?",
+                sum_c1_h: "Jeden profesionální web.", sum_c1_p: "Reprezentativní vzhled budující důvěru zákazníků.",
+                sum_c2_h: "Jedno místo pro všechny vaše informace.", sum_c2_p: "Už žádné opakované dotazy na otevírací dobu.",
+                sum_c3_h: "Jeden jednoduchý způsob, jak vás mohou zákazníci kontaktovat.", sum_c3_p: "Přímé poptávky a rezervace na 1 klik.",
+
+                b1: "Působte profesionálněji", b2: "Snadnější dohledatelnost na Googlu", b3: "Jasně prezentované služby",
+                b4: "Více přímých poptávek", b5: "Snadnější rezervace", b6: "Vše důležité na jednom místě",
+
+                trust_title: "Žádné riziko. Žádný závazek.",
+                trust_desc: "Připravíme nezávaznou nabídku a vizuální koncept vašeho webu. Neplatíte nic, dokud návrh neschválíte a nerozhodnete se pokračovat.",
+                trust_btn: "CHCI NÁVRH ZDARMA",
+
+                faq_tag: "ČASTÉ DOTAZY",
+                faq_title: "Vše, co potřebujete vědět",
+                faq_subtitle: "Jasné odpovědi bez složité IT hantýrky.",
+
+                q1_q: "Kolik stojí web?", q1_a: "Od €160 za tvorbu webu. Následná správa je €16/měsíc nebo €160/rok (včetně domény, hostingu, e-mailů a podpory).",
+                q2_q: "Jak dlouho to trvá?", q2_a: "Obvykle několik dní podle množství podkladů a funkcí.",
+                q3_q: "Musím dodat obsah sám?", q3_a: "Zákazníci dodají základní údaje, fotky a kontakt. S texty a strukturou vám pomůžeme.",
+                q4_q: "Může mít web víc jazykových verzí?", q4_a: "Ano. Web může mít 2-3 i více jazykových verzí.",
+                q5_q: "Mohou zákazníci přes web rezervovat?", q5_a: "Ano. Rezervační formulář posílá poptávky přímo na váš e-mail či WhatsApp.",
+                q6_q: "Bude web fungovat na telefonu?", q6_a: "Ano. Každý web je optimalizován pro telefony, tablety i počítače.",
+                q7_q: "Musím si sám koupit hosting a doménu?", q7_a: "Ne. Doménu i hosting kompletně zajišťujeme my v rámci správy webu.",
+                q8_q: "Můžete web později aktualizovat?", q8_a: "Ano. Drobné úpravy obsahu jsou zahrnuty v paušálu správy.",
+
+                form_tag: "NÁVRH ZDARMA",
+                form_title: "Chcete dát vašemu podnikání vlastní web?",
+                form_subtitle: "Napište nam o vaší firmě. Připravíme nezávazný grafický návrh zdarma.",
+                form_success_h: "Děkujeme! Poptávka byla odeslána.",
+                form_success_p: "Náš tým vás brzy kontaktuje s grafickým návrhem zdarma!",
+                f_name: "Vaše jméno *", f_biz: "Název firmy / podniku *", f_type: "Obor podnikání *", f_select: "Vyberte obor...",
+                f_phone: "Telefon / WhatsApp *", f_email: "E-mailová adresa *", f_social: "Stávající profil (Instagram, FB, Google)",
+                f_msg: "Zpráva nebo detaily (volitelné)", f_submit: "CHCI NABÍDKU ZDARMA", f_disclaimer: "* Bez jakéhokoliv rizika či poplatku vopřed.",
+
+                ft_motto: "Moderní a profesionální weby pro firmy v Albánii.",
+                stick_label: "Weby od", stick_cta: "NÁVRH ZDARMA", stick_price: "€160"
+            }
+        };
+
+        let currentLang = 'sq';
+
+        // Apply the initial language now that i18nData exists
+        setLanguage(currentLang);
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            
+            // Update active state on language pills
+            ['sq', 'en', 'cz'].forEach(l => {
+                const btn = document.getElementById(`lang-${l}`);
+                if (l === lang) {
+                    btn.className = "px-2.5 py-1 rounded-full transition-all bg-white text-slate-900 shadow-sm font-bold";
+                } else {
+                    btn.className = "px-2.5 py-1 rounded-full text-slate-600 hover:text-slate-900 transition-all font-medium";
+                }
+            });
+
+            // Update DOM text contents
+            const langDict = i18nData[lang];
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (langDict[key]) {
+                    element.innerHTML = langDict[key];
+                }
+            });
+        }
+
+        // Toggle Mobile Navigation
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                iconOpen.classList.add('hidden');
+                iconClose.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            }
+        }
+
+        // FAQ Accordion Toggle Logic
+        function toggleFaq(id) {
+            const ans = document.getElementById(`faq-ans-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            
+            if (ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                ans.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const form = document.getElementById('contactForm');
+            const successMsg = document.getElementById('form-success-msg');
+            
+            // Show Success Notification
+            successMsg.classList.remove('hidden');
+            form.reset();
+
+            // Smooth scroll to success message
+            successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
