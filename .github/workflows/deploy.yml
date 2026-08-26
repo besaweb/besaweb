@@ -25,7 +25,7 @@ jobs:
           protocol: ftps
           port: 21
           # Cílová složka na serveru - dokumentový kořen domény besaweb.al na GigaServer.cz.
-          server-dir: /www/besaweb.al/
+          server-dir: /besaweb.al/
           # Nenahrávat vývojářské/pomocné soubory, jen samotný web.
           exclude: |
             **/.git*
