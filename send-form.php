@@ -1,18 +1,14 @@
 <?php
 /**
- * BesaWeb — kontaktní formulář (zpracování a odeslání e-mailem)
+ * send-form.php
+ * Přijme data z kontaktního formuláře na webu BesaWeb a odešle je e-mailem
+ * přes SMTP schránku nastavenou v config.php.
  *
- * Umístěte tento soubor na stejný hosting jako index.html, do stejné
- * složky (např. /besaweb.al/send-form.php). Formulář na webu na něj
- * odkazuje jako na relativní cestu "send-form.php".
+ * Očekává POST požadavek (multipart/form-data nebo application/x-www-form-urlencoded)
+ * s poli: name, business, businessType, phone, email, social, message, website (honeypot).
+ *
+ * Vrací JSON: {"success": true, "message": "..."} nebo {"success": false, "message": "..."}
  */
-
-// ---- Nastavení ----------------------------------------------------
-$recipient   = 'info@besaweb.al';   // kam se poptávky posílají
-// Odesílací adresa MUSÍ být existující schránka na tomto hostingu - jinak
-// mnoho serverů (vč. GigaServer) poštu tiše zahodí i když mail() vrátí "úspěch".
-$fromAddress = 'info@besaweb.al';
-// ---------------------------------------------------------------------
 
 header('Content-Type: application/json; charset=utf-8');
 
@@ -25,6 +21,18 @@ function respond(bool $success, string $message): void {
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     respond(false, 'Invalid request method.');
 }
+
+require __DIR__ . '/phpmailer/src/Exception.php';
+require __DIR__ . '/phpmailer/src/PHPMailer.php';
+require __DIR__ . '/phpmailer/src/SMTP.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception as PHPMailerException;
+
+if (!file_exists(__DIR__ . '/config.php')) {
+    respond(false, 'Server is not configured yet (missing config.php).');
+}
+$config = require __DIR__ . '/config.php';
 
 // Honeypot proti spam robotům — skryté pole "website" v HTML formuláři.
 // Skuteční návštěvníci ho nikdy nevyplní, roboti often ano.
@@ -56,31 +64,60 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     respond(false, 'Invalid email address.');
 }
 
-$subject = "Nová poptávka z besaweb.al — $business";
+$mail = new PHPMailer(true);
 
-$body  = "Nová poptávka o bezplatný návrh z besaweb.al\n\n";
-$body .= "Jméno: $name\n";
-$body .= "Firma / podnik: $business\n";
-$body .= "Typ podnikání: $businessType\n";
-$body .= "Telefon / WhatsApp: $phone\n";
-$body .= "E-mail: $email\n";
-$body .= 'Aktuální web/sociální sítě: ' . ($social !== '' ? $social : '—') . "\n\n";
-$body .= "Zpráva:\n" . ($message !== '' ? $message : '—') . "\n";
+try {
+    // Server settings
+    $mail->isSMTP();
+    $mail->Host       = $config['smtp_host'];
+    $mail->SMTPAuth   = true;
+    $mail->Username   = $config['smtp_username'];
+    $mail->Password   = $config['smtp_password'];
+    $mail->SMTPSecure = $config['smtp_secure'] === 'tls' ? PHPMailer::ENCRYPTION_STARTTLS : PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port       = $config['smtp_port'];
+    $mail->CharSet    = 'UTF-8';
 
-$headers   = [];
-$headers[] = "From: BesaWeb Website <$fromAddress>";
-$headers[] = "Reply-To: $name <$email>"; // odpověď půjde přímo tazateli
-$headers[] = 'Content-Type: text/plain; charset=UTF-8';
-$headers[] = 'X-Mailer: PHP/' . phpversion();
+    // Sender / recipient
+    $mail->setFrom($config['from_email'], $config['from_name']);
+    $mail->addAddress($config['to_email'], $config['to_name']);
+    // Odpověď z e-mailového klienta půjde přímo tazateli, který formulář odeslal
+    $mail->addReplyTo($email, $name);
 
-// Envelope-sender (5. parametr) nastavíme na stejnou existující schránku -
-// některé servery bez tohoto parametru odesílatele odvodí jinak a poštu odmítnou.
-$envelopeSender = '-f' . $fromAddress;
+    // Content
+    $mail->isHTML(true);
+    $mail->Subject = "Nová poptávka z besaweb.al — $business";
 
-$sent = mail($recipient, $subject, $body, implode("\r\n", $headers), $envelopeSender);
+    $bodyRows = [
+        'Jméno'                       => $name,
+        'Firma / podnik'              => $business,
+        'Typ podnikání'               => $businessType,
+        'Telefon / WhatsApp'          => $phone,
+        'E-mail'                      => $email,
+        'Aktuální web/sociální sítě'  => $social !== '' ? $social : '—',
+        'Zpráva'                      => $message !== '' ? nl2br(htmlspecialchars($message)) : '—',
+    ];
 
-if ($sent) {
+    $html = '<h2 style="font-family:sans-serif;color:#059669;">Nová poptávka o bezplatný návrh z besaweb.al</h2>';
+    $html .= '<table style="font-family:sans-serif;font-size:14px;border-collapse:collapse;">';
+    foreach ($bodyRows as $label => $value) {
+        $html .= '<tr>'
+            . '<td style="padding:6px 12px 6px 0;font-weight:bold;vertical-align:top;">' . htmlspecialchars($label) . '</td>'
+            . '<td style="padding:6px 0;">' . ($label === 'Zpráva' ? $value : htmlspecialchars($value)) . '</td>'
+            . '</tr>';
+    }
+    $html .= '</table>';
+    $html .= '<p style="font-family:sans-serif;font-size:12px;color:#888;margin-top:16px;">Odesláno automaticky z formuláře na besaweb.al ' . date('d.m.Y H:i') . '</p>';
+
+    $mail->Body    = $html;
+    $mail->AltBody = implode("\n", array_map(
+        fn($label, $value) => "$label: " . strip_tags($value),
+        array_keys($bodyRows),
+        $bodyRows
+    ));
+
+    $mail->send();
     respond(true, 'Message sent successfully.');
+} catch (PHPMailerException $e) {
+    error_log('BesaWeb contact form mail error: ' . $mail->ErrorInfo);
+    respond(false, 'Failed to send message. Please try again later.');
 }
-
-respond(false, 'Failed to send message. Please try again later.');

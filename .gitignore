@@ -1,0 +1,3 @@
+# Citlivé přihlašovací údaje - nikdy necommitovat.
+# Skutečný config.php se vytváří přímo na serveru (viz config.example.php).
+config.php
