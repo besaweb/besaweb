@@ -24,9 +24,8 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: 21
-          # Cílová složka na serveru - dokumentový kořen domény.
-          # Nejčastěji "public_html/" (cPanel) nebo "www/" / "htdocs/" - ověřte u svého hostingu.
-          server-dir: public_html/
+          # Cílová složka na serveru - dokumentový kořen domény besaweb.al na GigaServer.cz.
+          server-dir: /www/besaweb.al/
           # Nenahrávat vývojářské/pomocné soubory, jen samotný web.
           exclude: |
             **/.git*
