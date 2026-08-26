@@ -1,0 +1,37 @@
+name: Deploy to FTP
+
+# Spustí se automaticky po každém push do main (tedy po každém commitu, který sem pošlu).
+# Lze také spustit ručně přes GitHub → Actions → Deploy to FTP → Run workflow.
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  ftp-deploy:
+    name: Nahrát na webhosting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stáhnout obsah repozitáře
+        uses: actions/checkout@v4
+
+      - name: Nahrát přes FTP/FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          # Cílová složka na serveru - dokumentový kořen domény.
+          # Nejčastěji "public_html/" (cPanel) nebo "www/" / "htdocs/" - ověřte u svého hostingu.
+          server-dir: public_html/
+          # Nenahrávat vývojářské/pomocné soubory, jen samotný web.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/*.original.png
+            **/*.before-bg-fix.png
+            **/README.md
