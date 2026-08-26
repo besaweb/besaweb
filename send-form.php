@@ -9,9 +9,9 @@
 
 // ---- Nastavení ----------------------------------------------------
 $recipient   = 'info@besaweb.al';   // kam se poptávky posílají
-$fromAddress = 'no-reply@besaweb.al'; // odesílací adresa (musí být na stejné doméně,
-                                       // jinak hosting/e-mail poskytovatelé mail často
-                                       // označí jako spam nebo ho rovnou odmítnou)
+// Odesílací adresa MUSÍ být existující schránka na tomto hostingu - jinak
+// mnoho serverů (vč. GigaServer) poštu tiše zahodí i když mail() vrátí "úspěch".
+$fromAddress = 'info@besaweb.al';
 // ---------------------------------------------------------------------
 
 header('Content-Type: application/json; charset=utf-8');
@@ -73,7 +73,11 @@ $headers[] = "Reply-To: $name <$email>"; // odpověď půjde přímo tazateli
 $headers[] = 'Content-Type: text/plain; charset=UTF-8';
 $headers[] = 'X-Mailer: PHP/' . phpversion();
 
-$sent = mail($recipient, $subject, $body, implode("\r\n", $headers));
+// Envelope-sender (5. parametr) nastavíme na stejnou existující schránku -
+// některé servery bez tohoto parametru odesílatele odvodí jinak a poštu odmítnou.
+$envelopeSender = '-f' . $fromAddress;
+
+$sent = mail($recipient, $subject, $body, implode("\r\n", $headers), $envelopeSender);
 
 if ($sent) {
     respond(true, 'Message sent successfully.');
