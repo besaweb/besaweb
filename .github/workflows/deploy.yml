@@ -23,14 +23,9 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
-          port: 21
           # Cílová složka na serveru - dokumentový kořen domény besaweb.al na GigaServer.cz.
           server-dir: /besaweb.al/
-          # Nenahrávat vývojářské/pomocné soubory, jen samotný web.
           exclude: |
             **/.git*
             **/.git*/**
             **/.github/**
-            **/*.original.png
-            **/*.before-bg-fix.png
-            **/README.md
