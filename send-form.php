@@ -55,8 +55,8 @@ $email        = cleanLine($_POST['email'] ?? '');
 $social       = cleanLine($_POST['social'] ?? '');
 $message      = trim(strip_tags($_POST['message'] ?? '')); // víceřádkové pole, zalomení tu vadit nemůže
 
-// Povinná pole
-if ($name === '' || $business === '' || $businessType === '' || $phone === '' || $email === '') {
+// Povinná pole (Emri i Biznesit a Lloji i Biznesit jsou nepovinné)
+if ($name === '' || $phone === '' || $email === '') {
     respond(false, 'Please fill in all required fields.');
 }
 
@@ -89,8 +89,8 @@ try {
 
     $bodyRows = [
         'Jméno'                       => $name,
-        'Firma / podnik'              => $business,
-        'Typ podnikání'               => $businessType,
+        'Firma / podnik'              => $business !== '' ? $business : '—',
+        'Typ podnikání'               => $businessType !== '' ? $businessType : '—',
         'Telefon / WhatsApp'          => $phone,
         'E-mail'                      => $email,
         'Aktuální web/sociální sítě'  => $social !== '' ? $social : '—',
